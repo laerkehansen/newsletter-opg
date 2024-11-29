@@ -9,8 +9,7 @@ const headersList = {
 };
 
 export async function getSubs() {
-  const response = await fetch(api);
-  const data = await response.json();
+  const { data, error } = await supabase.from("subscriptions").select("*");
   return data;
 }
 
