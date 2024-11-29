@@ -4,9 +4,11 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const headersList = {
   Accept: "application/json",
   "Content-Type": "application/json",
-  Prefer: "return=representation",
+  prefer: "return=representation",
   apikey: key,
 };
+
+console.log(url, key);
 
 export async function getSubs() {
   const response = await fetch(url, {
