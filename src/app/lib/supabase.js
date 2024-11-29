@@ -11,13 +11,8 @@ const headersList = {
 console.log(url, key);
 
 export async function getSubs() {
-  const response = await fetch(url, {
-    method: "GET",
-    headers: headersList,
-  });
-
+  const response = await fetch(url);
   const data = await response.json();
-  //   console.log(data);
   return data;
 }
 
