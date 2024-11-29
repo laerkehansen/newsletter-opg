@@ -8,8 +8,6 @@ const headersList = {
   apikey: key,
 };
 
-console.log(url, key);
-
 export async function getSubs() {
   const response = await fetch(url);
   const data = await response.json();
