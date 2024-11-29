@@ -9,7 +9,7 @@ const headersList = {
 };
 
 export async function getSubs() {
-  const response = await fetch(url);
+  const response = await fetch(`${url}/subscriptions`);
   const data = await response.json();
   return data;
 }
