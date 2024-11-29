@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
 async function Newsletter() {
-  console.log(subscribers);
+  // console.log(subscribers);
   async function send(FormData) {
     "use server";
     const data = {
