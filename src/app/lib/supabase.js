@@ -9,7 +9,9 @@ const headersList = {
 };
 
 export async function getSubs() {
-  const response = await fetch(`${url}/subscriptions`);
+  const response = await fetch(
+    "https://izlwnrcwutxxrclxaqwi.supabase.co/rest/v1/subscriptions"
+  );
   const data = await response.json();
   return data;
 }
