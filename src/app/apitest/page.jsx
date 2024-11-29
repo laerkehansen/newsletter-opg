@@ -1,4 +1,4 @@
-// import { getSubs } from "@/app/lib/supabase";
+import { getSubs } from "@/app/lib/supabase";
 import Newsletter from "@/app/components/newsletter";
 import Link from "next/link";
 
