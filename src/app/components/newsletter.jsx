@@ -2,9 +2,9 @@ import { getSubs, postSubs } from "@/app/lib/supabase";
 import { revalidatePath } from "next/cache";
 
 async function Newsletter() {
-  const subscribers = await getSubs();
+  // const subscribers = await getSubs();
 
-  console.log(subscribers);
+  // console.log(subscribers);
   // async function send(FormData) {
   //   "use server";
   //   const data = {
