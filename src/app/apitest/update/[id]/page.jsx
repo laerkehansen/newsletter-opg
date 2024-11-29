@@ -1,7 +1,6 @@
 import { getSubsById, patchSub, deleteSub } from "@/app/lib/supabase";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import Link from "next/link";
 
 async function SingleView({ params }) {
   //Todo
@@ -9,11 +8,12 @@ async function SingleView({ params }) {
 
   const subscriberArray = await getSubsById(id);
 
-  const subscriber = subscriberArray[0];
+  const subscriber = subscriberArray[0]; //her vælger jeg det første element i mit array
 
   console.log("id", id);
   console.log("subscriber", subscriberArray);
 
+  //her opdaterer jeg min data
   async function updateData(FormData) {
     "use server";
     console.log();
@@ -27,6 +27,7 @@ async function SingleView({ params }) {
     redirect("/apitest");
   }
 
+  //her sletter jeg min subscription
   async function deletedata() {
     "use server";
     await deleteSub(id);

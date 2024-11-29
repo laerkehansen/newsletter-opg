@@ -1,6 +1,5 @@
-import { getSubs, postSubs, patchSub } from "@/app/lib/supabase";
+import { getSubs, postSubs } from "@/app/lib/supabase";
 import { revalidatePath } from "next/cache";
-import Link from "next/link";
 
 async function Newsletter() {
   const subscribers = await getSubs();
@@ -33,7 +32,7 @@ async function Newsletter() {
           id="name"
           name="navn"
           className="bg-gray-100 text-gray-700"
-          required="true"
+          required={true}
         />
       </div>
       <div className="flex flex-col">
@@ -44,7 +43,7 @@ async function Newsletter() {
           type="text"
           id="email"
           name="email"
-          required="true"
+          required={true}
           className="bg-gray-100 text-gray-700"
         />
       </div>
