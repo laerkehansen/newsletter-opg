@@ -1,5 +1,7 @@
+import { createClient } from "@supabase/supabase-js";
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(url, key);
 
 const headersList = {
   Accept: "application/json",
@@ -8,10 +10,10 @@ const headersList = {
   apikey: key,
 };
 
-// export async function getSubs() {
-//   const { data, error } = await supabase.from("subscriptions").select("*");
-//   return data;
-// }
+export async function getSubs() {
+  const { data, error } = await supabase.from("subscriptions").select("*");
+  return data;
+}
 
 export async function getSubsById(id) {
   const response = await fetch(`${url}?id=eq.${id}`, {
