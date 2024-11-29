@@ -1,5 +1,6 @@
 import { getSubs } from "@/app/lib/supabase";
 import Newsletter from "@/app/components/newsletter";
+import Link from "next/link";
 
 export default async function Home() {
   const subscribers = await getSubs();
