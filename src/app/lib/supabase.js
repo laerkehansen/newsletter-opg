@@ -10,10 +10,10 @@ const headersList = {
   apikey: key,
 };
 
-export async function getSubs() {
-  const { data, error } = await supabase.from("subscriptions").select("*");
-  return data;
-}
+// export async function getSubs() {
+//   const { data, error } = await supabase.from("subscriptions").select("*");
+//   return data;
+// }
 
 export async function getSubsById(id) {
   const response = await fetch(`${url}?id=eq.${id}`, {
